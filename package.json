@@ -2,7 +2,7 @@
   "name": "medialert",
   "version": "0.0.1",
   "bin": {
-    "main": "bin/main.js"
+    "app": "bin/app.js"
   },
   "scripts": {
     "build": "tsc",

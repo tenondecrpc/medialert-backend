@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import * as Main from '../lib/main-stack';
+import * as Main from '../lib/stack/main-stack';
 
 test('SQS DoseAlertQueue Created', () => {
   const app = new cdk.App();
