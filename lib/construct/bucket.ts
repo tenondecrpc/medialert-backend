@@ -1,9 +1,13 @@
 import { Construct } from 'constructs';
+import * as cdk from 'aws-cdk-lib';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as kms from 'aws-cdk-lib/aws-kms';
 
 interface IBucket {
-    readonly key: kms.Key;
+    readonly key?: kms.Key;
+    readonly enforceSSL?: boolean;
+    readonly versioned?: boolean;
+    readonly removalPolicy?: cdk.RemovalPolicy;
 }
 
 export class Bucket extends Construct {
@@ -13,7 +17,10 @@ export class Bucket extends Construct {
         const bucket = new s3.Bucket(this, 'Bucket', {
             blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
             encryption: props?.key ? s3.BucketEncryption.KMS : s3.BucketEncryption.S3_MANAGED,
-            encryptionKey: props?.key
+            encryptionKey: props?.key,
+            enforceSSL: props?.enforceSSL,
+            versioned: props?.versioned,
+            removalPolicy: props?.removalPolicy,
         });
     }
 }
