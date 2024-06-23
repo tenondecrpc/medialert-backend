@@ -1,6 +1,10 @@
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
-import { IBucket } from '../interface/IBucket';
+import * as kms from 'aws-cdk-lib/aws-kms';
+
+interface IBucket {
+    readonly key: kms.Key;
+}
 
 export class Bucket extends Construct {
     constructor(scope: Construct, id: string, props?: IBucket) {
