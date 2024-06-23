@@ -8,13 +8,14 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "STACK_ENVIRONMENT=dev jest",
-    "bootstrap": "cdk bootstrap --profile cristiancdk",
-    "deploy-dev": "STACK_ENVIRONMENT=dev cdk deploy --profile cristiancdk",
+    "bootstrap-dev": "STACK_ENVIRONMENT=dev cdk bootstrap --profile cristiancdk",
     "diff-dev": "STACK_ENVIRONMENT=dev cdk diff --profile cristiancdk",
     "synth-dev": "STACK_ENVIRONMENT=dev cdk synth --profile cristiancdk",
-    "deploy-prod": "STACK_ENVIRONMENT=prod cdk deploy --profile cristiancdk",
+    "deploy-dev": "STACK_ENVIRONMENT=dev cdk deploy --profile cristiancdk",
+    "bootstrap-prod": "STACK_ENVIRONMENT=prod cdk bootstrap --profile cristiancdk",
     "diff-prod": "STACK_ENVIRONMENT=prod cdk diff --profile cristiancdk",
-    "synth-prod": "STACK_ENVIRONMENT=prod cdk synth --profile cristiancdk"
+    "synth-prod": "STACK_ENVIRONMENT=prod cdk synth --profile cristiancdk",
+    "deploy-prod": "STACK_ENVIRONMENT=prod cdk deploy --profile cristiancdk"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

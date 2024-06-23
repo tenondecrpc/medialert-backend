@@ -11,8 +11,8 @@ export class MainStack extends cdk.Stack {
     super(scope, id, props);
 
     const bucketUserPhotos = new Bucket(this, `UserPhotos`);
-    const bucketMedicaments = new Bucket(this, `MedicamentsPhoto`, { 
-      key: new kms.Key(this, `MedicamentsKey`),
+    const bucketMedicaments = new Bucket(this, `MedicamentPhotos`, { 
+      key: new kms.Key(this, `MedicamentKey`),
     });
   }
 }
