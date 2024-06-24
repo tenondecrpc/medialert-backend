@@ -1,3 +1,3 @@
-import * as lambda from 'aws-cdk-lib/aws-lambda';
+import { Runtime } from 'aws-cdk-lib/aws-lambda';
 
-export const NODEJS_RUNTIME = lambda.Runtime.NODEJS_20_X;
+export const NODEJS_RUNTIME = Runtime.NODEJS_20_X;
