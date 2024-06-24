@@ -14,7 +14,7 @@ export class Bucket extends Construct {
     constructor(scope: Construct, id: string, props?: IBucket) {
         super(scope, id);
 
-        const bucket = new s3.Bucket(this, 'Bucket', {
+        const bucket = new s3.Bucket(this, 'MyBucket', {
             blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
             encryption: props?.key ? s3.BucketEncryption.KMS : s3.BucketEncryption.S3_MANAGED,
             encryptionKey: props?.key,

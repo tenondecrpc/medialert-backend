@@ -8,7 +8,7 @@ import { capitalizeFirstLetter } from '../util/capitalize';
 const app = new cdk.App();
 const env = new ConfigEnv().config;
 const envName = capitalizeFirstLetter(env.environment);
-new MainStack(app, `${envName}-MainStack`, {
+new MainStack(app, `${envName}MainStack`, {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
